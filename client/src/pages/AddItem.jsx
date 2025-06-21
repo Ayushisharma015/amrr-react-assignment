@@ -33,7 +33,7 @@ export default function AddItem() {
     }
 
     try {
-      await axios.post("http://localhost:4000/api/items", form);
+      await axios.post("http://amrr-backend-rfg0.onrender.com/api/items", form);
       alert("Item added successfully!");
       setFormData({
         name: "",

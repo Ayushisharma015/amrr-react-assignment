@@ -9,7 +9,7 @@ export default function ViewItems() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/api/items")
+      .get("https://amrr-backend-rfg0.onrender.com/api/items")
       .then((res) => setItems(res.data))
       .catch(() => alert("Failed to load items"));
   }, []);
@@ -19,7 +19,7 @@ export default function ViewItems() {
     const email = prompt("Enter your email");
     if (!name || !email) return;
     try {
-      await axios.post("http://localhost:4000/api/enquire", {
+      await axios.post("https://amrr-backend-rfg0.onrender.com/api/enquire", {
         name,
         email,
         itemName: selectedItem.name,
